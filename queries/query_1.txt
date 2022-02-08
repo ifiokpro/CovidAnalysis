@@ -2,3 +2,10 @@ Select *
 From CovidProject..deaths
 Where continent is not null 
 order by 1,2
+
+// This is the data we will be working with
+
+Select Location, date, total_cases, new_cases, total_deaths, population
+From CovidProject..deaths
+Where continent is not null 
+order by 1,2
