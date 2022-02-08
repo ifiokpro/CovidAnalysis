@@ -19,3 +19,7 @@ Where location like '%nigeria%'
 and continent is not null
 order by 1,2
 
+-- Shows what percentage of population infected with Covid
+Select Location, date, Population, total_cases,  (total_cases/population)*100 as PercentPopulationInfected
+From CovidProject..deaths
+order by 1,2
