@@ -23,3 +23,11 @@ order by 1,2
 Select Location, date, Population, total_cases,  (total_cases/population)*100 as PercentPopulationInfected
 From CovidProject..deaths
 order by 1,2
+
+-- Showing contintents with the highest death count per population in the descending order of Total Death Count
+
+Select continent, MAX(cast(Total_deaths as int)) as TotalDeathCount
+From CovidProject..deaths
+Where continent is not null 
+Group by continent
+order by TotalDeathCount desc
