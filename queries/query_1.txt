@@ -1,0 +1,4 @@
+Select *
+From CovidProject..deaths
+Where continent is not null 
+order by 1,2
