@@ -31,3 +31,11 @@ From CovidProject..deaths
 Where continent is not null 
 Group by continent
 order by TotalDeathCount desc
+
+
+-- Countries with Highest Infection Rate compared to Population
+
+Select Location, Population, MAX(total_cases) as HighestInfectionCount,  Max((total_cases/population))*100 as PercentPopulationInfected
+From CovidProject..deaths
+Group by Location, Population
+order by PercentPopulationInfected desc
